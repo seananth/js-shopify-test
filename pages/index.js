@@ -10,49 +10,7 @@ import {
 
 const Index = () => (
   <Page>
-    <Heading>Flow Cart :P</Heading>
-
-    <Navigation location="/">
-      <Navigation.Section
-        items={[
-          {
-            url: "./ActiveFlows",
-            label: "Active Flows",
-            icon: ActivitiesMajor,
-          },
-          {
-            url: "/path/to/place",
-            label: "Analytics",
-            icon: AnalyticsMajor,
-          },
-          {
-            url: "/path/to/place",
-            label: "Usage",
-            icon: StoreStatusMajor,
-          },
-        ]}
-      />
-      <Navigation.Section
-        title="Build"
-        items={[
-          {
-            url: "/path/to/place",
-            label: "New Flow",
-            icon: CirclePlusMinor,
-          },
-          {
-            url: "/path/to/place",
-            label: "Edit Flow",
-            icon: EditMajor,
-          },
-        ]}
-        action={{
-          accessibilityLabel: "Add sales channel",
-          icon: CirclePlusMinor,
-          onClick: () => {},
-        }}
-      />
-    </Navigation>
+    
   </Page>
 );
 
