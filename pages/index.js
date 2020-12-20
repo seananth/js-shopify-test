@@ -1,4 +1,6 @@
-import { Heading, Page, Navigation } from "@shopify/polaris";
+import React, { useState } from "react";
+import { Page } from "@shopify/polaris";
+import { ResourcePicker } from "@shopify/app-bridge-react";
 import { Icon } from "@shopify/polaris";
 import {
   CirclePlusMinor,
@@ -8,11 +10,27 @@ import {
   StoreStatusMajor,
 } from "@shopify/polaris-icons";
 
-const Index = () => (
-  <Page>
-    
-  </Page>
-);
+function Index() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <Page
+      title="Select Product"
+      primaryAction={{
+        content: "Select product",
+        onAction: () => setOpen(true),
+      }}
+    >
+      <ResourcePicker
+        resourceType="Product"
+        showVariants={false}
+        allowMultiple={false}
+        open={open}
+        onCancel={() => setOpen(false)}
+      />
+    </Page>
+  );
+}
 
 export default Index;
 
