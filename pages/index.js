@@ -10,8 +10,10 @@ import {
   StoreStatusMajor,
 } from "@shopify/polaris-icons";
 
+
 function Index() {
   const [open, setOpen] = useState(false);
+  const [resources, setResources] = useState();
 
   return (
     <Page
@@ -27,9 +29,15 @@ function Index() {
         allowMultiple={false}
         open={open}
         onCancel={() => setOpen(false)}
+        onSelection={(resources) => handleSelection(resources)}
       />
+
     </Page>
-  );
+  )
+  function handleSelection(resources) {
+    setResources(resources)
+    console.log(resources);
+  }
 }
 
 export default Index;
