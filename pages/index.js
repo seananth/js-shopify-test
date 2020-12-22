@@ -12,7 +12,6 @@ import {
 
 function Index() {
   const [open, setOpen] = useState(false);
-  const [resources, setResources] = useState();
 
   return (
     <Page
@@ -28,26 +27,27 @@ function Index() {
         allowMultiple={false}
         open={open}
         onCancel={() => setOpen(false)}
-        onSelection={(resources) => handleSelection(resources)}
+        onSelection={(payloadData) => handleSelection(payloadData)}
       />
 
       <Layout>
         <Layout.Section>
           <Card title="Product" sectioned>
-            <p>bababoey</p>
+            <p>pic</p>
             <Thumbnail
-              source=""
+              source="https://cdn.shopify.com/s/files/1/0368/1802/6632/products/76990-pinto-bridle_1024x1024@2x.jpg?v=1596035977"
               size="large"
-              alt="Black choker necklace"
+              alt="cool horse"
             />
           </Card>
         </Layout.Section>
       </Layout>
     </Page>
   );
-  function handleSelection(resources) {
-    setResources(resources);
-    console.log(resources);
+  
+  function handleSelection(payloadData) {
+    console.log(payloadData);
+    setOpen(false)
   }
 }
 
