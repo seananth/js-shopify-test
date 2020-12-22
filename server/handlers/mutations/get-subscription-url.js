@@ -20,7 +20,7 @@ export function RECURRING_CREATE(url) {
           {
             plan: {
               appRecurringPricingDetails: {
-                  price: { amount: 149, currencyCode: USD }
+                  price: { amount: 49, currencyCode: USD }
               }
             }
           }

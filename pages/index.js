@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Page } from "@shopify/polaris";
+import { Page, Layout, Card, Thumbnail } from "@shopify/polaris";
 import { ResourcePicker } from "@shopify/app-bridge-react";
 import { Icon } from "@shopify/polaris";
 import {
@@ -9,7 +9,6 @@ import {
   ActivitiesMajor,
   StoreStatusMajor,
 } from "@shopify/polaris-icons";
-
 
 function Index() {
   const [open, setOpen] = useState(false);
@@ -32,10 +31,22 @@ function Index() {
         onSelection={(resources) => handleSelection(resources)}
       />
 
+      <Layout>
+        <Layout.Section>
+          <Card title="Product" sectioned>
+            <p>bababoey</p>
+            <Thumbnail
+              source=""
+              size="large"
+              alt="Black choker necklace"
+            />
+          </Card>
+        </Layout.Section>
+      </Layout>
     </Page>
-  )
+  );
   function handleSelection(resources) {
-    setResources(resources)
+    setResources(resources);
     console.log(resources);
   }
 }
